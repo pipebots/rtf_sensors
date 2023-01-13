@@ -16,8 +16,7 @@ except ImportError:
     pass
 
 try:
-    from adafruit_lsm6ds.lsm6dsox import LSM6DSOX
-    from adafruit_lsm6ds import AccelRange, GyroRange, Rate
+    from adafruit_lsm6ds import AccelRange, GyroRange, Rate, LSM6DSOX
 except ImportError:
     # print(">> pip install -U adafruit-circuitpython-lsm6ds")
     pass

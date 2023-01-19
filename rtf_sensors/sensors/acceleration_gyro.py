@@ -35,7 +35,9 @@ class rtf_IMU(Node):
         self.timer_imu  = self.create_timer(1/100, self.callback)
 
         if i2c is None:
-            self.i2c = busio.I2C(board.SCL, board.SDA, frequency=400000)
+            # self.i2c = busio.I2C(board.SCL, board.SDA, frequency=400000)
+            # AJB NASTY HACK!!!!!!
+            self.i2c = busio.I2C(1, 0, frequency=400000)
         else:
             self.i2c = i2c
 
